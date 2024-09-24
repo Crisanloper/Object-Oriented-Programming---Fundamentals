@@ -7,7 +7,17 @@ public class Main {
 //		Employee cristian = new Employee("Cristian", "López", 001,30,25000.00);
 	//	Employee cristian = new Employee("Cristian", "López", 001,30,100,10,25000.00,1);
 		SalesRep cristian = new SalesRep("Cristian", "López", 001,30,100,10,25000.00,1,1500.00);
-	
+		
+		SalesManager manager = new SalesManager("Andrés", "Erazo", 1000,45,152,0,950.25,15,0);
+		
+		manager.addSalesRep(new SalesRep("Libertad", "Rivas", 2501,21,125,1,250,3,25500));
+		manager.addSalesRep(new SalesRep("Carlos", "Argueta", 2502,20,125,1,250,3,25500));
+		
+		//System.out.println(manager.calculateBonus());
+		System.out.println("SALARIO"+manager.getSalary()+manager.calculateBonus());
+		System.out.println("INFO 2501"+manager.getSalesRep(2501).calculateCommission());
+		System.out.println(manager);
+		
 		cristian.setDaysWorked(100);
 		cristian.setYearsWorked(1);
 		cristian.setVacationDaysTaken(10);

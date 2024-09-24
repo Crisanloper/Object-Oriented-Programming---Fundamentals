@@ -40,7 +40,17 @@ public class Employee {
 	this.yearsWorked = yearsWorked;
 }//constructor 2
 	
+		public int timeToRetirement(){
+		      // time to retirement = min(60 - age, 40 - yearsWorked)
+		   return Math.min(60-age, 40-yearsWorked);
+		   }//timeToRetirement
 
+		public int vacationTimeLeft(){
+		return (int)((daysWorked / 360.0) * (30 - vacationDaysTaken));   
+		}//vacationTimeLeft
+		public double calculateBonus(){
+	     return  2.2*salary;
+		}//calculateBonus
 	   
 	
 	public String getFirstName() {
@@ -92,17 +102,7 @@ public class Employee {
 		this.yearsWorked = yearsWorked;
 	}//setYearsWorked
 	
-	public int timeToRetirement(){
-	      // time to retirement = min(60 - age, 40 - yearsWorked)
-	   return Math.min(60-age, 40-yearsWorked);
-	   }//timeToRetirement
 
-	public int vacationTimeLeft(){
-	return (int)((daysWorked / 360.0) * (30 - vacationDaysTaken));   
-	}//vacationTimeLeft
-	public double calculateBonus(){
-     return  2.2*salary;
-	}//calculateBonus
 	
 	@Override
 	public String toString() {
